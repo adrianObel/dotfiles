@@ -1,8 +1,7 @@
 function punch --description "Creates directories leading up to and including the file"
-  
-  set -l path (dirname $argv[1])
-
-  mkdir -p $path
-  touch $argv[1]
-  
+  for file in $argv
+    set -l path (dirname $file)
+    mkdir -p $path
+    touch $file
+  end
 end
