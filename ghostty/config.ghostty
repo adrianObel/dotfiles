@@ -1,0 +1,20 @@
+#
+# THEME
+#
+theme = dark:Gruvbox Dark Hard,light:Gruvbox Light Hard
+
+#
+# SHELL
+#
+shell-integration = detect
+
+#
+# KEYBINDS
+#
+
+# Jump to command
+keybind = cmd+shift+up=jump_to_prompt:-1
+keybind = cmd+shift+down=jump_to_prompt:1
+
+# Expand focused pane
+keybind = cmd+shift+enter=toggle_split_zoom
