@@ -20,16 +20,12 @@ cd ~/.dotfiles
 - **ghostty** - Terminal emulator configuration
 - **git** - Git configuration
 
-## Installed Utilities
+## Utilities
 
-The installation script automatically installs the following tools via Homebrew:
+The installation script automatically installs the following tools:
 
-- **neovim** - Modern Vim-based text editor
-- **fish** - Friendly interactive shell
-- **ghostty** - Fast, native terminal emulator
-- **git** - Distributed version control system
 - **gh** - GitHub CLI
-- **worktrunk** - Git workflow tool for managing branches
+- **worktrunk** - Git workflow tool for managing worktrees 
 - **ripgrep** - Fast recursive search tool
 - **fd** - Fast alternative to `find`
 - **fzf** - Command-line fuzzy finder
