@@ -22,6 +22,10 @@ return {
     "tpope/vim-fugitive",
     cmd = { "Git", "G", "Gdiffsplit", "Gread", "Gwrite", "Ggrep", "GMove", "GDelete", "GBrowse", "GRemove", "GRename" },
   },
+  {
+    "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen" }
+  }
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
