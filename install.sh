@@ -16,7 +16,7 @@ NC='\033[0m' # No Color
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Package definitions
-BREW_FORMULAS=(neovim fish git gh ripgrep fd fzf bat eza)
+BREW_FORMULAS=(neovim fish git gh ripgrep fd fzf bat eza git-delta)
 BREW_CASKS=(ghostty)
 STOW_PACKAGES=(nvim fish ghostty git)
 

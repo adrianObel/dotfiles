@@ -5,6 +5,7 @@
 [core]
 	editor = nvim
 	autocrlf = input
+	pager = delta
 
 [init]
 	defaultBranch = main
@@ -31,6 +32,15 @@
 
 [merge]
 	conflictstyle = diff3
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	light = false
+	line-numbers = true
+	side-by-side = false
 
 # Include local config for machine-specific settings
 # Create ~/.gitconfig.local for:
