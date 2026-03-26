@@ -1,7 +1,7 @@
 #
 # THEME
 #
-theme = dark:Gruvbox Dark Hard,light:Gruvbox Light Hard
+theme = dark:Gruvbox Dark,light:Gruvbox Light 
 
 #
 # SHELL
