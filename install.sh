@@ -19,6 +19,7 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BREW_FORMULAS=(neovim fish git gh ripgrep fd fzf bat eza git-delta)
 BREW_CASKS=(ghostty)
 STOW_PACKAGES=(nvim fish ghostty git)
+FISH_PLUGINS=(jorgebucaran/autopair.fish)
 
 # Parse command line arguments
 INSTALL_PACKAGES=true
@@ -160,6 +161,39 @@ set_fish_shell() {
     fi
 }
 
+# Install fisher plugin manager
+install_fisher() {
+    if command_exists fish; then
+        info "Installing fisher plugin manager..."
+
+        # Check if fisher is already installed
+        if fish -c "type -q fisher" &>/dev/null; then
+            success "Fisher already installed"
+        else
+            # Install fisher
+            fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+            success "Fisher installed"
+        fi
+    else
+        warning "Fish shell not found, skipping fisher installation"
+    fi
+}
+
+# Install fish plugins
+install_fish_plugins() {
+    if command_exists fish && fish -c "type -q fisher" &>/dev/null; then
+        info "Installing fish plugins..."
+
+        for plugin in "${FISH_PLUGINS[@]}"; do
+            info "Installing $plugin..."
+            fish -c "fisher install $plugin"
+            success "$plugin installed"
+        done
+    else
+        warning "Fisher not found, skipping fish plugins installation"
+    fi
+}
+
 # Main installation
 main() {
     echo ""
@@ -174,6 +208,9 @@ main() {
 
     if [[ "$STOW_CONFIGS" == true ]]; then
         stow_packages
+        echo ""
+        install_fisher
+        install_fish_plugins
         echo ""
         set_fish_shell
         echo ""
