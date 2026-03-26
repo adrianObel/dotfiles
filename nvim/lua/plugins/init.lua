@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
   },
 
@@ -11,6 +11,14 @@ return {
     config = function()
       require "configs.lspconfig"
     end,
+  },
+
+  {
+    "iamcco/markdown-preview.nvim",
+    ft = "markdown",
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end
   },
 
   -- test new blink
