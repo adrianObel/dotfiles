@@ -16,9 +16,26 @@ cd ~/.dotfiles
 ## What's Included
 
 - **nvim** - Neovim configuration
-- **fish** - Fish shell 
+- **fish** - Fish shell
 - **ghostty** - Terminal emulator configuration
-- **git** - Git configuration 
+- **git** - Git configuration
+
+## Installed Utilities
+
+The installation script automatically installs the following tools via Homebrew:
+
+- **neovim** - Modern Vim-based text editor
+- **fish** - Friendly interactive shell
+- **ghostty** - Fast, native terminal emulator
+- **git** - Distributed version control system
+- **gh** - GitHub CLI
+- **worktrunk** - Git workflow tool for managing branches
+- **ripgrep** - Fast recursive search tool
+- **fd** - Fast alternative to `find`
+- **fzf** - Command-line fuzzy finder
+- **bat** - Cat clone with syntax highlighting
+- **eza** - Modern replacement for `ls`
+- **git-delta** - Syntax-highlighting pager for git diffs
 
 ## Manual Installation
 
