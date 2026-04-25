@@ -120,6 +120,17 @@ install_packages() {
     done
 }
 
+prepare_environment() {
+    info "Installing cargo..."
+
+    if ! command_exists cargo; then
+        mise use rust
+        success "Cargo installed"
+    else 
+        success "Cargo already installed"
+    fi
+}
+
 # Stow packages
 stow_packages() {
     info "Stowing dotfiles..."
@@ -203,6 +214,7 @@ main() {
     if [[ "$INSTALL_PACKAGES" == true ]]; then
         install_homebrew
         install_packages
+        prepare_environment
         echo ""
     fi
 
