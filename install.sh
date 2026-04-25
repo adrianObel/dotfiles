@@ -123,7 +123,18 @@ install_packages() {
 prepare_environment() {
     info "Installing mise tools..."
     mise install
-    success "Installed all mise tools."
+    success "global mise tools installed."
+}
+
+# NVIM dependencies 
+install_nvim_plugins() {
+    info "Installing NVIM plugins..."
+    
+    if ! command_exists tree-sitter; then
+        info "Installing tree-sitter..."
+        cargo binstall tree-sitter-cli
+        success "tree-sitter-cli installed"
+    fi
 }
 
 # Stow packages
@@ -210,6 +221,7 @@ main() {
         install_homebrew
         install_packages
         prepare_environment
+        install_nvim_plugins
         echo ""
     fi
 
