@@ -121,14 +121,9 @@ install_packages() {
 }
 
 prepare_environment() {
-    info "Installing cargo..."
-
-    if ! command_exists cargo; then
-        mise use rust
-        success "Cargo installed"
-    else 
-        success "Cargo already installed"
-    fi
+    info "Installing mise tools..."
+    mise install
+    success "Installed all mise tools."
 }
 
 # Stow packages
