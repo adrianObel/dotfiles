@@ -18,7 +18,7 @@ cd ~/.dotfiles
 - **nvim** - Neovim configuration
 - **fish** - Fish shell
 - **ghostty** - Terminal emulator configuration
-- **git** - Git configuration
+- **git** - Git Configuration
 
 ## Utilities
 
@@ -32,6 +32,7 @@ The installation script automatically installs the following tools:
 - **bat** - Cat clone with syntax highlighting
 - **eza** - Modern replacement for `ls`
 - **git-delta** - Syntax-highlighting pager for git diffs
+- **mise** - Language manager and task runner
 
 ## Manual Installation
 
@@ -149,6 +150,9 @@ This file is automatically sourced if it exists.
 │
 ├── ghostty/
 │   └── .config/ghostty/    # Ghostty config (stows to ~/.config/ghostty)
+│
+├── mise/
+│   └── .config/mise/       # Mise config (stows to ~/.config/mise)
 │
 └── git/
     └── .gitconfig          # Git config (stows to ~/.gitconfig)
