@@ -28,6 +28,14 @@ return {
     },
   },
  
+  { 
+    'nvim-mini/mini.ai',
+    version = '*',
+    event = "VeryLazy",
+    config = function()
+      require("mini.ai").setup()
+    end,
+  },
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 }
