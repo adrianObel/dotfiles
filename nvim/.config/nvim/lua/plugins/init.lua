@@ -36,6 +36,6 @@ return {
       require("mini.ai").setup()
     end,
   },
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
+
+  { import = "nvchad.blink.lazyspec" },
 }
