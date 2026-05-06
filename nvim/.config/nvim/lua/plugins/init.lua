@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = "BufWritePre", 
+    event = "BufWritePre",
     opts = require "configs.conform",
   },
 
@@ -21,15 +21,29 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "vim", "lua", "vimdoc",
-        "html", "css", "python"
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "python",
+        "javascript",
+        "bash",
+        "cmake",
+        "dockerfile",
+        "editorconfig",
+        "csv",
+        "terraform",
+        "toml",
+        "typescript",
+        "json",
       },
     },
   },
- 
-  { 
-    'nvim-mini/mini.ai',
-    version = '*',
+
+  {
+    "nvim-mini/mini.ai",
+    version = "*",
     event = "VeryLazy",
     config = function()
       require("mini.ai").setup()
@@ -37,17 +51,17 @@ return {
   },
 
   { import = "nvchad.blink.lazyspec" },
-  
+
   {
-    'nvim-telescope/telescope.nvim',
-    enabled = false
+    "nvim-telescope/telescope.nvim",
+    enabled = false,
   },
 
   {
     "folke/snacks.nvim",
     lazy = false,
     priority = 1000,
-    opts = require "configs.snacks", 
+    opts = require "configs.snacks",
   },
 
   {
@@ -55,13 +69,13 @@ return {
     config = function()
       local config = {
         view = {
-          adaptive_size = true
+          adaptive_size = true,
         },
         renderer = {
-          group_empty = true
-        }
+          group_empty = true,
+        },
       }
       require("nvim-tree").setup(config)
     end,
-  }
+  },
 }
