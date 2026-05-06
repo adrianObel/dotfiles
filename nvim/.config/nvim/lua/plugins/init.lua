@@ -44,6 +44,13 @@ return {
   },
 
   {
+    "folke/snacks.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = require "configs.snacks", 
+  },
+
+  {
     "nvim-tree/nvim-tree.lua",
     config = function()
       local config = {
