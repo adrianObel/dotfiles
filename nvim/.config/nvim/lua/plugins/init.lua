@@ -41,5 +41,20 @@ return {
   {
     'nvim-telescope/telescope.nvim',
     enabled = false
+  },
+
+  {
+    "nvim-tree/nvim-tree.lua",
+    config = function()
+      local config = {
+        view = {
+          adaptive_size = true
+        },
+        renderer = {
+          group_empty = true
+        }
+      }
+      require("nvim-tree").setup(config)
+    end,
   }
 }
