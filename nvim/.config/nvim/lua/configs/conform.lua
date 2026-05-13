@@ -5,7 +5,7 @@ local options = {
     -- html = { "prettier" },
     python = function(bufnr)
       if require("conform").get_formatter_info("ruff_format", bufnr).available then
-        return { "ruff_format" }
+        return { "ruff_format", "ruff_fix", "ruff_organize_imports" }
       else
         return { "isort", "black" }
       end
