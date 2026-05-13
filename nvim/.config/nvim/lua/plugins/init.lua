@@ -42,6 +42,13 @@ return {
   },
 
   {
+    "folke/which-key.nvim",
+    opts = {
+      preset = "helix",
+    },
+  },
+
+  {
     "nvim-mini/mini.ai",
     version = "*",
     event = "VeryLazy",
