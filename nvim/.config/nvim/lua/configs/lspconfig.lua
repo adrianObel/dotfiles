@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-vim.lsp.config('pyright', {
+vim.lsp.config("pyright", {
   settings = {
     pyright = {
       -- Using Ruff's import organizer
@@ -9,7 +9,7 @@ vim.lsp.config('pyright', {
     python = {
       analysis = {
         -- Ignore all files for analysis to exclusively use Ruff for linting
-        ignore = { '*' },
+        ignore = { "*" },
       },
     },
   },
