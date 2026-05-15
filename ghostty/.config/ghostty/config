@@ -1,7 +1,7 @@
 #
 # THEME
 #
-theme = dark:Gruvbox Dark,light:Gruvbox Light 
+theme = dark:Catppuccin Dark,light:Catppuccin Latte
 
 #
 # SHELL
