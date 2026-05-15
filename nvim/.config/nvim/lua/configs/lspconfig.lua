@@ -18,4 +18,5 @@ vim.lsp.config("pyright", {
 local servers = { "html", "cssls", "basedpyright", "vtsls", "prettier", "eslint-lsp", "toml" }
 vim.lsp.enable(servers)
 
+vim.lsp.inlay_hint.enable()
 -- read :h vim.lsp.config for changing options of lsp servers
