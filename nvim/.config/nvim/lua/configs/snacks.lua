@@ -1,6 +1,6 @@
 local options = {
   explorer = {
-    enabled = false,
+    enabled = true,
   },
   picker = {
     enabled = true,

@@ -9,10 +9,21 @@ M.base46 = {
   theme = "catppuccin-latte",
   theme_toggle = { "catppuccin", "catppuccin-latte" },
 
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
+  hl_override = {
+    NvimTreeNormal = {
+      bg = "NONE",
+    },
+    NvimTreeNormalNC = {
+      bg = "NONE",
+    },
+    NvimTreeEndOfBuffer = {
+      bg = "NONE",
+    },
+    NvimTreeWinSeparator = {
+      fg = "line",
+      bg = "none",
+    },
+  },
 }
 
 M.nvdash = {
