@@ -15,7 +15,31 @@ M.base46 = {
   -- },
 }
 
-M.nvdash = { load_on_startup = true }
+M.nvdash = {
+  load_on_startup = true,
+  buttons = {
+    { txt = "  Find File", keys = "ff", cmd = ":lua require('snacks').picker.files()" },
+    { txt = "  Recent Files", keys = "fo", cmd = ":lua require('snacks').picker.recent()" },
+    { txt = "󰈭  Live Grep", keys = "sg", cmd = ":lua require('snacks').picker.grep()" },
+    { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
+    { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" },
+
+    { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
+
+    {
+      txt = function()
+        local stats = require("lazy").stats()
+        local ms = math.floor(stats.startuptime) .. " ms"
+        return "  Loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms
+      end,
+      hl = "NvDashFooter",
+      no_gap = true,
+      content = "fit",
+    },
+
+    { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
+  },
+}
 
 M.ui = {
   statusline = {
