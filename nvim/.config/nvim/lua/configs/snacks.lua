@@ -1,40 +1,24 @@
 local options = {
   explorer = {
-    enabled = true,
+    enabled = false,
   },
   picker = {
     enabled = true,
     layout = {
-      preset = "telescope",
-      -- Override to tighten up for NvChad's denser UI feel
+      preset = "vscode",
       layout = {
-        backdrop = 60,
-        width = 0.85,
-        height = 0.80,
-        min_width = 80,
-        min_height = 30,
-        box = "horizontal",
         border = "rounded",
-        title = "{title} {live} {flags}",
-        title_pos = "center",
-        {
-          box = "vertical",
-          border = "none",
-          title = "{input}",
-          { win = "input", height = 1, border = "bottom" },
-          { win = "list", border = "none" },
-        },
-        {
-          win = "preview",
-          title = "{preview}",
-          border = "rounded",
-          width = 0.5,
-        },
       },
     },
+    prompt = "   ",
     sources = {
       files = { hidden = true, ignored = false },
       grep = { hidden = true, ignored = false },
+      explorer = {
+        layout = {
+          preview = "main"
+        }
+      }
     },
     -- Keymaps *inside* the picker window (mirrors Telescope defaults)
     win = {

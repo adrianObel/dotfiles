@@ -6,9 +6,9 @@
 local M = {}
 
 M.base46 = {
-  theme = "catppuccin-latte",
+  theme = "catppuccin",
   theme_toggle = { "catppuccin", "catppuccin-latte" },
-
+  --
   hl_override = {
     NvimTreeNormal = {
       bg = "NONE",
@@ -24,6 +24,37 @@ M.base46 = {
       bg = "none",
     },
   },
+
+  hl_add = {
+    -- TelescopeNormal
+    SnacksPicker               = { bg = "darker_black" },
+    SnacksPickerList           = { bg = "darker_black" },
+    SnacksPickerPreview        = { bg = "darker_black" },
+    -- TelescopeBorder (borderless)
+    SnacksPickerBorder         = { fg = "darker_black", bg = "darker_black" },
+    SnacksPickerListBorder     = { fg = "darker_black", bg = "darker_black" },
+    SnacksPickerPreviewBorder  = { fg = "darker_black", bg = "darker_black" },
+    -- TelescopeResultsTitle (borderless)
+    SnacksPickerListTitle      = { fg = "darker_black", bg = "darker_black" },
+    -- TelescopeSelection
+    SnacksPickerListCursorLine = { bg = "black2", fg = "white" },
+    -- TelescopePromptNormal (borderless)
+    SnacksPickerInput          = { fg = "white", bg = "black2" },
+    -- TelescopePromptBorder (borderless)
+    SnacksPickerInputBorder    = { fg = "black2", bg = "black2" },
+    -- TelescopePromptTitle
+    SnacksPickerInputTitle     = { fg = "black", bg = "red" },
+    -- TelescopePromptPrefix
+    SnacksPickerInputIcon      = { fg = "red", bg = "black2" },
+    -- TelescopePreviewTitle
+    SnacksPickerPreviewTitle   = { fg = "black", bg = "green" },
+    -- TelescopeMatching
+    SnacksPickerMatch          = { bg = "one_bg", fg = "blue" },
+    -- TelescopeResultsDiff*
+    SnacksDiffAdd              = { fg = "green" },
+    SnacksDiffChange           = { fg = "yellow" },
+    SnacksDiffDelete           = { fg = "red" },
+  }
 }
 
 M.nvdash = {
@@ -60,14 +91,5 @@ M.ui = {
   --          lazyload = false
   --      }
 }
-
--- Update Snacks picker to match NVChad theme
-local bg = vim.api.nvim_get_hl(0, { name = "Normal" }).bg
-local bg_alt = vim.api.nvim_get_hl(0, { name = "Visual" }).bg
-
-vim.api.nvim_set_hl(0, "SnacksPickerBorder", { fg = bg_alt, bg = bg })
-vim.api.nvim_set_hl(0, "SnacksPickerPreviewBorder", { fg = bg, bg = bg })
-vim.api.nvim_set_hl(0, "SnacksPickerInputBorder", { fg = bg, bg = bg })
-vim.api.nvim_set_hl(0, "SnacksPickerListBorder", { fg = bg, bg = bg })
 
 return M

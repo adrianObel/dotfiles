@@ -58,31 +58,31 @@ end, { desc = "find recent" })
 
 -- git
 map("n", "<leader>gb", function()
-  Snacks.picker.git_branches()
+  Snacks.picker.git_branches({ layout = { preset = "vertical"}})
 end, { desc = "git branches" })
 
 map("n", "<leader>gl", function()
-  Snacks.picker.git_log()
+  Snacks.picker.git_log({ layout = { preset = "vertical"}})
 end, { desc = "git log" })
 
 map("n", "<leader>gL", function()
-  Snacks.picker.git_log_line()
+  Snacks.picker.git_log_line({ layout = { preset = "vertical"}})
 end, { desc = "git log line" })
 
 map("n", "<leader>gs", function()
-  Snacks.picker.git_status()
+  Snacks.picker.git_status({ layout = { preset = "vertical"}})
 end, { desc = "git status" })
 
 map("n", "<leader>gS", function()
-  Snacks.picker.git_stash()
+  Snacks.picker.git_stash({ layout = { preset = "vertical"}})
 end, { desc = "git stash" })
 
 map("n", "<leader>gd", function()
-  Snacks.picker.git_diff()
+  Snacks.picker.git_diff({ layout = { preset = "vertical"}})
 end, { desc = "git diff" })
 
 map("n", "<leader>gf", function()
-  Snacks.picker.git_log_file()
+  Snacks.picker.git_log_file(){ layout = { preset = "vertical"}}
 end, { desc = "git log file" })
 
 -- search
