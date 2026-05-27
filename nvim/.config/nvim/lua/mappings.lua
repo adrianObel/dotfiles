@@ -5,6 +5,7 @@ local del = vim.keymap.del
 
 map("n", ";", ":", { desc = "cmd enter command mode" })
 map("i", "jk", "<ESC>")
+map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP code action"})
 
 -- Remove Telescope bindings
 local telescope_maps = {
