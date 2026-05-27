@@ -1,3 +1,6 @@
 [tools]
 "rust" = { "version" = "latest", "profile" = "minimal" }
 "node" = "lts"
+
+[settings]
+idiomatic_version_file_enable_tools = ["python"]
