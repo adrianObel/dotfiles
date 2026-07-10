@@ -5,7 +5,7 @@ local del = vim.keymap.del
 
 map("n", ";", ":", { desc = "cmd enter command mode" })
 map("i", "jk", "<ESC>")
-map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP code action"})
+map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP code action" })
 
 -- Remove Telescope bindings
 local telescope_maps = {
@@ -24,9 +24,8 @@ for _, key in ipairs(telescope_maps) do
   pcall(del, "n", key) -- pcall so a missing map doesn't abort startup
 end
 
-
 -- Snacks --
-local Snacks = require('snacks');
+local Snacks = require "snacks"
 
 map("n", "<leader><space>", function()
   Snacks.picker.smart()
@@ -59,33 +58,36 @@ end, { desc = "find recent" })
 
 -- git
 map("n", "<leader>gb", function()
-  Snacks.picker.git_branches({ layout = { preset = "vertical"}})
+  Snacks.picker.git_branches { layout = { preset = "vertical" } }
 end, { desc = "git branches" })
 
 map("n", "<leader>gl", function()
-  Snacks.picker.git_log({ layout = { preset = "vertical"}})
+  Snacks.picker.git_log { layout = { preset = "vertical" } }
 end, { desc = "git log" })
 
 map("n", "<leader>gL", function()
-  Snacks.picker.git_log_line({ layout = { preset = "vertical"}})
+  Snacks.picker.git_log_line { layout = { preset = "vertical" } }
 end, { desc = "git log line" })
 
 map("n", "<leader>gs", function()
-  Snacks.picker.git_status({ layout = { preset = "vertical"}})
+  Snacks.picker.git_status { layout = { preset = "vertical" } }
 end, { desc = "git status" })
 
 map("n", "<leader>gS", function()
-  Snacks.picker.git_stash({ layout = { preset = "vertical"}})
+  Snacks.picker.git_stash { layout = { preset = "vertical" } }
 end, { desc = "git stash" })
 
 map("n", "<leader>gd", function()
-  Snacks.picker.git_diff({ layout = { preset = "vertical"}})
+  Snacks.picker.git_diff { layout = { preset = "vertical" } }
 end, { desc = "git diff" })
 
 map("n", "<leader>gf", function()
-  Snacks.picker.git_log_file(){ layout = { preset = "vertical"}}
+  Snacks.picker.git_log_file() { layout = { preset = "vertical" } }
 end, { desc = "git log file" })
 
+map("n", "<leader>gg", function()
+  Snacks.lazygit()
+end, { desc = "LazyGit" })
 -- search
 map("n", "<leader>sg", function()
   Snacks.picker.grep()

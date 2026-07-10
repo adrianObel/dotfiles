@@ -50,8 +50,9 @@ local options = {
   scope = { enabled = true },
   zen = { enabled = false },
   terminal = { enabled = false },
-  lazygit = { enabled = false },
+  lazygit = { enabled = true },
   gitbrowse = { enabled = true },
+  image = { enabled = true },
 }
 
 return options
