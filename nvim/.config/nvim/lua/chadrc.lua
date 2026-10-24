@@ -37,7 +37,12 @@ M.base46 = {
     -- TelescopeResultsTitle (borderless)
     SnacksPickerListTitle      = { fg = "darker_black", bg = "darker_black" },
     -- TelescopeSelection
-    SnacksPickerListCursorLine = { bg = "black2", fg = "white" },
+    SnacksPickerListCursorLine = { bg = "one_bg2", bold = true },
+    -- Muted path parts (default to NonText, nearly invisible on light themes)
+    SnacksPickerDir            = { fg = "base07" },
+    SnacksPickerPathHidden     = { fg = "base07" },
+    SnacksPickerPathIgnored    = { fg = "light_grey" },
+    SnacksPickerTotals         = { fg = "base07", bg = "black2" },
     -- TelescopePromptNormal (borderless)
     SnacksPickerInput          = { fg = "white", bg = "black2" },
     -- TelescopePromptBorder (borderless)
@@ -49,7 +54,7 @@ M.base46 = {
     -- TelescopePreviewTitle
     SnacksPickerPreviewTitle   = { fg = "black", bg = "green" },
     -- TelescopeMatching
-    SnacksPickerMatch          = { bg = "one_bg", fg = "blue" },
+    SnacksPickerMatch          = { fg = "nord_blue", bold = true },
     -- TelescopeResultsDiff*
     SnacksDiffAdd              = { fg = "green" },
     SnacksDiffChange           = { fg = "yellow" },
